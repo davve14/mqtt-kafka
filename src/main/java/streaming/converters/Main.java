@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException, MqttException {
 
-		KafkaProducerClient producer = new KafkaProducerClient();
+		KafkaProducerClient producer = new KafkaProducerClient();		
 		new MqttConsumerClient("iot_data",producer,"testtopic");
 	}
 }

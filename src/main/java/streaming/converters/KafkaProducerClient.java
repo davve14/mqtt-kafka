@@ -5,6 +5,7 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 
@@ -15,8 +16,17 @@ public class KafkaProducerClient {
 	
 	public KafkaProducerClient() throws IOException {
 
-		String kafkaBrokerURI = properties.getPropValues("kafkaBrokerURI");
-
+		String kafkaBrokerURI;
+		
+		String env = System.getenv("KAFKA_BROKER_URI");
+		if (env != null) {
+			kafkaBrokerURI = env;
+		}
+		else {
+			kafkaBrokerURI = properties.getPropValues("kafkaBrokerURI");
+		}
+		System.out.println("Using kafka broker on " + kafkaBrokerURI);
+		
 		Properties properties = new Properties();
 		properties.put("bootstrap.servers", kafkaBrokerURI);
 		properties.put("acks", "all");
