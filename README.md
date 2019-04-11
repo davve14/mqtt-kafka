@@ -11,7 +11,7 @@
 `docker build -t daasp14/mqtt-kafka .`
 
 ### Yml file
-Example file included: mqtt-kafka.yml
+Example file included: mqtt-kafka.yml, change environments variables according to your kafka and mqtt brokers.
      
 ### Run a new container
 `docker-compose -f mqtt-kafka.yml up -d`
