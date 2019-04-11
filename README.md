@@ -8,7 +8,7 @@
 `cd mqtt-kafka`
 
 ### Build the Image from the Dockerfile
-`docker build -t daasp14/mqtt-kafka .`
+`docker build -t daasp14/mqtt-kafka:0.5 .`
 
 ### Yml file
 Example file included: mqtt-kafka.yml, change environments variables according to your kafka and mqtt brokers.
