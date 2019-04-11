@@ -3,7 +3,7 @@
 ## Building and running a docker image
 
 ### Clone the repo
-`git clone `
+`git clone https://github.com/davve14/mqtt-kafka.git`
 
 ### Build the Image from the Dockerfile
 `docker build -t daasp14/mqtt-kafka .`
