@@ -1,15 +1,15 @@
+package streaming.converters;
 
 import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
-
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 
-public class Main {
-
-	public static void main(String[] args) {
+public class KafkaConsumerClient {
+	
+	public KafkaConsumerClient() {
 		Properties props = new Properties();
 	 	props.put("bootstrap.servers", "192.168.39.52:9092");
 	    props.put("group.id", "test");
